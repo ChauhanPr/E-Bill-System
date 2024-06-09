@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication14.Models;
+using WebApplication14.Repository;
 
 
 namespace WebApplication14.Controllers
@@ -22,6 +23,9 @@ namespace WebApplication14.Controllers
         [HttpPost]
         public ActionResult Create(BillDetails details)
         {
+            Data data = new Data();
+            data.SaveBillDetail(details);
+            ModelState.Clear();
             return View();
         }
     }

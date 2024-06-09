@@ -8,7 +8,7 @@ namespace WebApplication14.Models
 {
 	public class BillDetails
 	{
-		public int id { get; set; }
+		public int Id { get; set; }
 		public string custname { get; set; }
 		public int contact { get; set; }
 		public string address { get; set; }
